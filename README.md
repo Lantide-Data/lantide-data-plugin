@@ -18,6 +18,8 @@ The plugin follows Lantide's in-app connection model. A trusted agent onboarding
 
 The user confirms scope and access mode in Lantide. Admin does not bypass Plan lifecycle, evidence, Report, Activity, or audit requirements.
 
+On supported local Codex clients, the install skill opens Lantide's GUI-confirmed configure deep link. Lantide shows the requested access and Codex config destination; only the user's **Approve & Connect** action creates the persistent credential and updates the local MCP setting. The plugin never creates or receives the credential, and the existing one-time Copy flow remains the fallback.
+
 ## Development
 
 Requirements: Python 3.9 or newer.
