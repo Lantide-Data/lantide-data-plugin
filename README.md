@@ -12,6 +12,8 @@ This repository is the public integration layer. Lantide Data itself remains the
 
 The initial release is skills-only. It does not access local data by itself and does not embed a remote MCP server. Live analysis requires Lantide Data Desktop and its local Agent Integration.
 
+Portal-ready Marketplace copy is maintained in [`submission/marketplace-listing.md`](submission/marketplace-listing.md). The manifest carries the same short description, long description, and starter prompts so the personal Marketplace preview stays aligned with the submission draft.
+
 ## Connection defaults
 
 The plugin follows Lantide's in-app connection model. A trusted agent onboarding a new or empty installation uses the current Create connection default: **Persistent + All workspaces + Admin**, so it can establish the workspace and complete a useful first workflow. For an existing, clearly scoped workspace, **Single workspace + Execute** is the bounded formal-analysis path. **Observe** is reserved for explicitly read-only evaluation or review; it is not the generic new-user default.
