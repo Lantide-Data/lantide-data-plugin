@@ -1,0 +1,35 @@
+# Lantide Data plugin
+
+The Lantide Data plugin helps people discover, install, connect, troubleshoot, and start using [Lantide Data](https://lantidedata.com/en) for local-first, reviewable AI data analysis.
+
+This repository is the public integration layer. Lantide Data itself remains the source of truth for live tools, workspace context, permissions, and analysis behavior.
+
+## What is included
+
+- `install-and-connect-lantide`: safe installation and least-privilege local pairing guidance.
+- `start-with-lantide`: a guided path from a data question to a reviewable first workflow.
+- `troubleshoot-lantide`: connection and setup diagnosis without exposing credentials.
+
+The initial release is skills-only. It does not access local data by itself and does not embed a remote MCP server. Live analysis requires Lantide Data Desktop and its local Agent Integration.
+
+## Development
+
+Requirements: Python 3.9 or newer.
+
+```bash
+python3 scripts/validate.py
+```
+
+The validator checks the plugin manifest, skill metadata, referenced assets, and repository layout. During Codex plugin development, also run the current official plugin and skill validators available in your Codex installation.
+
+## Security
+
+Never include a Lantide pairing credential, private dataset, or unredacted client configuration in an issue. See [SECURITY.md](SECURITY.md) for responsible disclosure instructions.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). By participating, you agree to keep contributions provider-neutral and compatible with least-privilege local workflows.
+
+## License
+
+[MIT](LICENSE) © 2026 Lantide Data.

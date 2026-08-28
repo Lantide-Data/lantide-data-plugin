@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install and connect Lantide"
+  short_description: "Install Lantide Data and connect a local AI agent safely."
+  default_prompt: "Help me install Lantide Data and connect it safely to this client."

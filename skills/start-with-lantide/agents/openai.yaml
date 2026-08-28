@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start with Lantide"
+  short_description: "Turn local data into a reviewable first analysis workflow."
+  default_prompt: "Help me frame and start my first reviewable analysis in Lantide Data."

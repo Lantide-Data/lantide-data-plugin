@@ -1,0 +1,4 @@
+interface:
+  display_name: "Troubleshoot Lantide"
+  short_description: "Diagnose Lantide installation and local MCP connection problems."
+  default_prompt: "Help me diagnose why Lantide Data is not connecting to this client."

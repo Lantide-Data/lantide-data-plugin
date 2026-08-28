@@ -1,0 +1,45 @@
+{
+  "name": "lantide-data-plugin",
+  "version": "0.1.0",
+  "description": "Install, connect, troubleshoot, and start using Lantide Data for local-first, reviewable AI data analysis.",
+  "author": {
+    "name": "Lantide Data",
+    "email": "support@lantidedata.com",
+    "url": "https://lantidedata.com/en"
+  },
+  "homepage": "https://lantidedata.com/en",
+  "repository": "https://github.com/Lantide-Data/lantide-data-plugin",
+  "license": "MIT",
+  "keywords": [
+    "data-analysis",
+    "local-first",
+    "mcp",
+    "csv",
+    "excel",
+    "parquet"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Lantide Data",
+    "shortDescription": "Start local-first, reviewable AI data analysis.",
+    "longDescription": "Guides you through installing Lantide Data, connecting a trusted local AI agent, troubleshooting setup, and starting a reviewable analysis workflow. The plugin does not access local data by itself.",
+    "developerName": "Lantide Data",
+    "category": "Productivity",
+    "capabilities": [
+      "Guided setup",
+      "Local-first data analysis",
+      "Connection troubleshooting"
+    ],
+    "websiteURL": "https://lantidedata.com/en",
+    "privacyPolicyURL": "https://lantidedata.com/en/privacy",
+    "termsOfServiceURL": "https://lantidedata.com/en/terms",
+    "defaultPrompt": [
+      "Help me install and connect Lantide Data.",
+      "Help me start a reviewable analysis with Lantide Data.",
+      "Troubleshoot my Lantide Data connection."
+    ],
+    "brandColor": "#3388FC",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}
