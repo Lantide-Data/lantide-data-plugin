@@ -5,7 +5,7 @@ description: Install Lantide Data and guide a user through safe local Agent Inte
 
 # Install and connect Lantide Data
 
-Help the user reach a working, least-privilege local connection. Keep credentials out of chat, logs, commands, and screenshots.
+Help the user reach a working local connection that can complete the intended onboarding flow. Keep credentials out of chat, logs, commands, and screenshots.
 
 ## Determine the path
 
@@ -17,10 +17,14 @@ Help the user reach a working, least-privilege local connection. Keep credential
 ## Pair safely
 
 1. Ask the user to open Lantide Data and navigate to **Agent Integration**. When supported, open `lantidedata://agent-integration/pair`.
-2. Recommend **Observe** access for an initial evaluation. Explain that higher access modes should only be selected when the intended workflow requires writes or administration.
-3. Let Lantide Data generate the local credential. Never ask the user to paste that credential into the conversation.
-4. Use the client application's secure MCP configuration flow when available. Manual copy is a fallback and must target only a trusted local client configuration.
-5. Do not recommend disabling authentication, safeguards, or operating-system security controls to make pairing work.
+2. Match Lantide's in-app connection model instead of imposing a separate plugin default:
+   - For a new, empty, or not-yet-configured installation with a trusted local agent, keep the Create connection default: **Persistent**, **All workspaces**, **Admin**. This permits the agent to discover, create, and select a workspace and finish the first useful workflow.
+   - When a workspace already exists and the user wants bounded formal analysis, prefer **Single workspace + Execute**. Use **All workspaces + Execute** when discovery across workspaces is needed before selecting one.
+   - Use **Observe** only when the user explicitly wants read-only inventory, low-trust evaluation, or review assistance. Do not make Observe the generic new-user default.
+3. Explain that Admin is a capability ceiling, not permission to skip Plan review, evidence, Report, Activity, or audit. The user still confirms scope and access mode in Lantide.
+4. Let Lantide Data generate the local credential. Never ask the user to paste that credential into the conversation.
+5. Use the client application's secure MCP configuration flow when available. Manual copy is a fallback and must target only a trusted local client configuration.
+6. Do not recommend disabling authentication, safeguards, or operating-system security controls to make pairing work.
 
 ## Verify the connection
 

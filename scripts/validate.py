@@ -68,6 +68,12 @@ def main() -> int:
         if not (skill_dir / "agents" / "openai.yaml").is_file():
             fail(f"missing agents/openai.yaml for skill {skill_dir.name}")
 
+    install_skill = (skill_root / "install-and-connect-lantide" / "SKILL.md").read_text(encoding="utf-8")
+    if "Persistent" not in install_skill or "All workspaces" not in install_skill or "Admin" not in install_skill:
+        fail("install skill must describe the in-app Persistent + All workspaces + Admin onboarding default")
+    if "Recommend **Observe** access for an initial evaluation" in install_skill:
+        fail("install skill must not restore Observe as the generic new-user default")
+
     interface = manifest.get("interface", {})
     for asset_key in ("composerIcon", "logo"):
         relative = interface.get(asset_key)

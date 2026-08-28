@@ -12,6 +12,12 @@ This repository is the public integration layer. Lantide Data itself remains the
 
 The initial release is skills-only. It does not access local data by itself and does not embed a remote MCP server. Live analysis requires Lantide Data Desktop and its local Agent Integration.
 
+## Connection defaults
+
+The plugin follows Lantide's in-app connection model. A trusted agent onboarding a new or empty installation uses the current Create connection default: **Persistent + All workspaces + Admin**, so it can establish the workspace and complete a useful first workflow. For an existing, clearly scoped workspace, **Single workspace + Execute** is the bounded formal-analysis path. **Observe** is reserved for explicitly read-only evaluation or review; it is not the generic new-user default.
+
+The user confirms scope and access mode in Lantide. Admin does not bypass Plan lifecycle, evidence, Report, Activity, or audit requirements.
+
 ## Development
 
 Requirements: Python 3.9 or newer.
